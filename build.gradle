@@ -9,14 +9,6 @@ description = """Maven Recipe: RPM Package"""
 sourceCompatibility = 1.5
 targetCompatibility = 1.5
 
-buildscript {
-  repositories {
-    jcenter()
-  }
-  dependencies {
-    classpath "org.jfrog.buildinfo:build-info-extractor-gradle:3.1.0"
-  }
-}
 
 repositories {
   maven { url "http://repo.maven.apache.org/maven2" }
@@ -25,5 +17,3 @@ repositories {
 dependencies {
   compile group: 'org.hibernate', name: 'hibernate-core', version:'3.3.2.GA'
 }
-  
-apply plugin: 'com.jfrog.artifactory'
