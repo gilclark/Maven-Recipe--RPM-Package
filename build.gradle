@@ -1,6 +1,5 @@
 apply plugin: 'java'
 apply plugin: 'maven'
-apply plugin: 'com.jfrog.artifactory'
 
 group = 'com.symantec.cto.pdx'
 version = '0.0.1-SNAPSHOT'
@@ -10,10 +9,18 @@ description = """Maven Recipe: RPM Package"""
 sourceCompatibility = 1.5
 targetCompatibility = 1.5
 
+buildscript {
+  repositories {
+    jcenter()
+    maven { url "http://repo.maven.apache.org/maven2" }
+  }
+  dependencies {
+    classpath "org.jfrog.buildinfo:build-info-extractor-gradle:3.1.0"
+  }
+}
 
-repositories {
-     maven { url "http://repo.maven.apache.org/maven2" }
-}
-dependencies {
+  dependencies {
     compile group: 'org.hibernate', name: 'hibernate-core', version:'3.3.2.GA'
-}
+  }
+  
+apply plugin: 'com.jfrog.artifactory'
