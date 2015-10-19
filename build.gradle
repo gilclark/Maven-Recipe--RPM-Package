@@ -1,14 +1,15 @@
-apply plugin: 'java'
-apply plugin: 'maven'
+plugins {
+  id "nebula.os-package" version "2.2.6"
+}
 
 group = 'com.symantec.cto.pdx'
 version = '0.0.1-SNAPSHOT'
 
 description = """Maven Recipe: RPM Package"""
 
-sourceCompatibility = 1.5
-targetCompatibility = 1.5
-
+apply plugin:'java'
+apply plugin:'maven'
+apply plugin: 'nebula.rpm'
 
 repositories {
   maven { url "http://repo.maven.apache.org/maven2" }
@@ -16,4 +17,8 @@ repositories {
 
 dependencies {
   compile group: 'org.hibernate', name: 'hibernate-core', version:'3.3.2.GA'
+}
+
+task buildRpm(type: Rpm) {
+  release '1'
 }
