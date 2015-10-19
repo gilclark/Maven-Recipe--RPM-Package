@@ -51,7 +51,7 @@
 	<distributionManagement>
 		<repository>
 			<id>artifactory</id>
-			<url>http://artifactory.ges.symantec.com/artifactory/maven-test</url>
+			<url>http://artifactory.ges.symantec.com/artifactory/yum-test</url>
 		</repository>
 	</distributionManagement>
 
