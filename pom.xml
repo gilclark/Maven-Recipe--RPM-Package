@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>ro.lmn.maven.recipe</groupId>
-	<artifactId>rpm-package</artifactId>
+	<groupId>com.symantec.cto.pdx</groupId>
+	<artifactId>rpm-test-package</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Maven Recipe: RPM Package</name>
 	<build>
@@ -20,13 +20,13 @@
 				</executions>
 				<configuration>
 					<copyright>2010, NoBody</copyright>
-					<group>Development</group>
+					<group>PDX Development</group>
 					<description>Maven Recipe: RPM Package.</description>
 					<mappings>
 						<mapping>
 							<directory>${app.home}/lib/</directory>
-							<dependency/>
-							<artifact/>
+							<dependency />
+							<artifact />
 						</mapping>
 						<mapping>
 							<directory>${app.home}/conf</directory>
@@ -46,7 +46,14 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
+	<distributionManagement>
+		<repository>
+			<id>artifactory</id>
+			<url>http://artifactory.ges.symantec.com/artifactory/maven-test</url>
+		</repository>
+	</distributionManagement>
+
 	<properties>
 		<app.home>/opt/app/</app.home>
 	</properties>
