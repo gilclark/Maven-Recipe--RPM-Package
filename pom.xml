@@ -13,8 +13,9 @@
 				<version>2.0.1</version>
 				<executions>
 					<execution>
+						<id>build-rpm</id>
 						<goals>
-							<goal>rpm</goal>
+							<goal>attached-rpm</goal>
 						</goals>
 					</execution>
 				</executions>
