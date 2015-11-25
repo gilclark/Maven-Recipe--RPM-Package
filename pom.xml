@@ -59,13 +59,6 @@
 		</plugins>
 	</build>
 
-	<distributionManagement>
-		<repository>
-			<id>artifactory</id>
-			<url>http://artifactory.ges.symantec.com/artifactory/yum-test</url>
-		</repository>
-	</distributionManagement>
-
 	<properties>
 		<app.home>/opt/app/</app.home>
 	</properties>
