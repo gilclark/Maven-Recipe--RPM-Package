@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.symantec.cto.pdx</groupId>
 	<artifactId>rpm-test-package</artifactId>
-	<version>0.0.4-SNAPSHOT</version>
+	<version>0.0.4</version>
 	<name>Maven Recipe: RPM Package</name>
 	<build>
 		<plugins>
